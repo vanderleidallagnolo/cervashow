@@ -372,76 +372,8 @@ ul {
 		<p>Aqui você encontrará todas as novidades, vídeos e atualizações de nosso canal no Youtube.
            <br>Certifique-se de se inscrever em nossas redes sociais e ligar as notificações em nosso canal para nunca perder um vídeo!</p>
 
-        <style>
-
-            #spTipoListaYoutubeActive
-            {
-                color: white;
-                background-color: black; 
-                border-radius: 10%;         
-                padding: 4px;        
-            }
-
-            #spTipoListaYoutubeInactive
-            {
-                color: black;
-                background-color: lightgray;
-                border-radius: 10%;  
-                padding: 4px;              
-            }
-
-        </style>
-        <script>
-
-            const YT_POPULARES  = 0;
-            const YT_RECENTES   = 1;
-
-            function fAlternaTipoListaYoutube(pTipoLista)
-            {
-
-                let vAuxPopulares   = "https://www.youtube.com/embed?listType=playlist&list=UULPMZQ1d6VsQEp4v2nQSyKlBQ&index=1";
-                let vAuxRecentes    = "https://www.youtube.com/embed?listType=playlist&list=UULFMZQ1d6VsQEp4v2nQSyKlBQ&index=1";
-
-
-                switch (pTipoLista) {
-                    case YT_POPULARES   :
-                        
-                        document.getElementById("frameYT"   ).src = vAuxPopulares;
-                        break;
-                
-                    case YT_RECENTES    :
-
-                    document.getElementById("frameYT"       ).src  = vAuxRecentes;
-                        break;
-
-                    default:
-                        break;
-                
-                }
-                // end switch (pTipoLista) {
-            }
-            // end fAlternaTipoListaYoutube
-
-            function fAlteraEstiloCursor(pObj)
-            {
-                pObj.style.cursor = 'pointer';
-            }
-            // end function fAlteraEstiloCursor(pObj)
-
-        </script>
-		<h3><span id="spTipoListaYoutubeActive"     onmouseover="fAlteraEstiloCursor(this);" onclick="fAlternaTipoListaYoutube(YT_RECENTES   )"    >Enviado recentemente</span>
-            <span id="spTipoListaYoutubeInactive"   onmouseover="fAlteraEstiloCursor(this);" onclick="fAlternaTipoListaYoutube(YT_POPULARES  )"    >Mais popular</span>
-        </h3>
-        <!-- ver o primeiro da lista dos mais populares 
-        https://www.youtube.com/embed?listType=playlist&list=UULPMZQ1d6VsQEp4v2nQSyKlBQ&index=1
-
-        ver o primeiro da lista dos mais recentes
-        https://www.youtube.com/embed?listType=playlist&list=UULFMZQ1d6VsQEp4v2nQSyKlBQ&index=1
-        
-            REFERÊNCIA:
-            https://www.youtube.com/watch?v=GlPDLffycu4
-    -->
-		<iframe id="frameYT" width="560" height="315" src="https://www.youtube.com/embed?listType=playlist&list=UULFMZQ1d6VsQEp4v2nQSyKlBQ&index=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<h3>Playlists</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/vkK9KBoAu-k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </main>
 
 	<footer>
@@ -466,5 +398,6 @@ ul {
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
 </body>
 </html>
