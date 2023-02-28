@@ -411,15 +411,15 @@ ul {
                     case YT_POPULARES   :
                         
                         document.getElementById("frameYT"   ).src = vAuxPopulares;
-                        document.getElementById("spTipoListaYTRecentes" ).className     = vAuxClassYTListActive     ;
-                        document.getElementById("spTipoListaYTPopulares").className     = vAuxClassYTListInactive   ;
+                        document.getElementById("spTipoListaYTRecentes" ).className     = vAuxClassYTListInactive  ;
+                        document.getElementById("spTipoListaYTPopulares").className     = vAuxClassYTListActive    ;
                         break;
                 
                     case YT_RECENTES    :
 
                         document.getElementById("frameYT"       ).src  = vAuxRecentes;
-                        document.getElementById("spTipoListaYTRecentes" ).className     = vAuxClassYTListInactive   ;
-                        document.getElementById("spTipoListaYTPopulares").className     = vAuxClassYTListActive     ;
+                        document.getElementById("spTipoListaYTRecentes" ).className     = vAuxClassYTListActive    ;
+                        document.getElementById("spTipoListaYTPopulares").className     = vAuxClassYTListInactive  ;
                          break;
 
                     default:
