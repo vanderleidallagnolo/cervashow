@@ -314,10 +314,11 @@ ul {
 </style>
 <script>
 
-    const PAGE_PROFESSORES 	= 0;
-    const PAGE_CURSOS 		= 1;
-    const PAGE_SERVICOS 	= 2;
-    const CONTATO_RODAPE	= 3;
+    const PAGE_PROFESSORES 	        = 0;
+    const PAGE_CURSOS 		        = 1;
+    const PAGE_SERVICOS 	        = 2;
+    const CONTATO_RODAPE	        = 3;
+    const CONTATO_WHATS_APP_TOPO	= 4;
 
     function fAbreWhats(pService)
     {
@@ -343,6 +344,11 @@ ul {
                 window.open("https://wa.me/+5547988596940?text=Contato%20Site%20Cerva%20Show");
                 return false;
                 break;
+
+            case CONTATO_WHATS_APP_TOPO:
+                window.open("https://wa.me/+5547988596940?text=Contato%20Site%20Cerva%20Show");
+                return false;
+                break;
         
             default:
                 break;
@@ -360,9 +366,9 @@ ul {
 		<nav>
 			<ul>
 				<li><a href="https://www.youtube.com/cervashowoficial" target="blank">Canal do Youtube</a></li>
-				<li><a href="#">Contato</a></li>
-				<li><a href="#">Sobre o Cerva Show</a></li>				
-                <li><a href="#">Login</a></li>
+				<li><a href="#" onclick="fAbreWhats(CONTATO_WHATS_APP_TOPO);">Contato</a></li>
+				<li><a href="https://www.youtube.com/@CervaShowOficial/about" target="blank" >Sobre o Cerva Show</a></li>				
+                <li><a href="#" onclick="alert('Acesso restrito');" >Login</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -440,15 +446,12 @@ ul {
 		<h3><span id="spTipoListaYTRecentes"    class="spListaYTActive"     onmouseover="fAlteraEstiloCursor(this);" onclick="fAlternaTipoListaYoutube(YT_RECENTES   )"    >Enviado recentemente</span>
             <span id="spTipoListaYTPopulares"   class="spListaYTInactive"   onmouseover="fAlteraEstiloCursor(this);" onclick="fAlternaTipoListaYoutube(YT_POPULARES  )"    >Mais popular</span>
         </h3>
-        <!-- ver o primeiro da lista dos mais populares 
-        https://www.youtube.com/embed?listType=playlist&list=UULPMZQ1d6VsQEp4v2nQSyKlBQ&index=1
-
-        ver o primeiro da lista dos mais recentes
-        https://www.youtube.com/embed?listType=playlist&list=UULFMZQ1d6VsQEp4v2nQSyKlBQ&index=1
-        
-            REFERÊNCIA:
+        <!-- 
+            REFERÊNCIA sobre como obter:
+                * certo vídeo de determinada posição numa lista
+                * as respectivas playlists (populares ou recentes) de determinado canal
             https://www.youtube.com/watch?v=GlPDLffycu4
-    -->
+        -->
 		<iframe id="frameYT" width="560" height="315" src="https://www.youtube.com/embed?listType=playlist&list=UULFMZQ1d6VsQEp4v2nQSyKlBQ&index=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </main>
 
