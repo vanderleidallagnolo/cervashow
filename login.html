@@ -6,13 +6,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!--<link href="swanwich/style.css" rel="stylesheet">-->
+
+    <style>
+      .social-login {
+        flex-direction: column;
+        background-color: #f5f1f1;
+        border: 0px solid black;
+        flex: 0.05;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: #0c0b0b;
+      }
+        .social-login a {
+          color: rgb(4, 144, 71)
+        }
+
+      
+        .spH1_text {
+          color: rgb(4, 144, 71)
+        }
+
+        .btn-primary{
+          background-color: rgb(4, 144, 71);
+          border-color:rgb(4, 144, 71);
+          color:rgb(233, 181, 1);
+        }
+    </style>
+<script>
+
+
+  function openModalPopUp() {
+  
+      let vModal = document.getElementById('modal');
+  
+      vModal.style.display = 'block';
+  
+  }
+  
+  
+      function fTrataNavbarButtonsOnclick(pButtonClicked)
+      {
+  
+          openModalPopUp();
+  
+      }
+      //   function fTrataNavbarButtonsOnclick(pButtonClicked)
+  
+      function fConfigure()
+      {
+  
+          // Grab all buttons in the nav bar
+          const navButtons = document.querySelectorAll('.navbar .button');
+  
+          // Add an onclick event listener to each button
+          for (let i = 0; i < navButtons.length; i++) {
+              
+              const button = navButtons[i];
+              button.addEventListener('click', function() {
+  
+                  fTrataNavbarButtonsOnclick(this);
+  
+              });
+  
+          }
+  
+      }
+      // function fConfigure()
+  
+  </script>
+  
   </head>
-  <body>
+  <body onload="fConfigure();">
+
+    <style>
+
+        .modal{
+            
+            position: fixed; 
+            z-index: 1; 
+            left: 0; 
+            top: 0; 
+            width: 100%;
+            height: 100%; 
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            display: none;
+
+        }
+
+  </style>
+
+  <div id="modal" class="modal" >
+    <div class="modal-content" style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%;">
+      <p>In development.
+      <svg width="40" height="40">
+        <circle cx="20" cy="20" r="20" fill="yellow" />
+        <text x="20" y="20" text-anchor="middle" dominant-baseline="central" font-size="20">!</text>
+      </svg>
+    </p>
+      <span class="close" onclick="document.getElementById('modal').style.display='none';">&times;</span>
+
+    </div>
+  </div>
+
     <div class="container-fluid">
       <div class="login-form">
         <div class="row">
           <div class="col-md-4 offset-md-4">
-            <h1 class="text-center text-primary">Welcome</h1>
+            <h1 class="text-center text-primary"><span class="spH1_text">Welcome</span></h1>
             <form action="login.php" method="post">
               <div class="form-group">
                 <input type="text" name="username" class="form-control" placeholder="Username" required>
@@ -21,12 +125,14 @@
                 <input type="password" name="password" class="form-control" placeholder="Password" required>
               </div>
               <div class="form-group">
-                <input type="submit" class="btn btn-primary btn-block" value="Login">
+                <input type="submit" class="btn btn-primary btn-block" value="Login" onclick="openModalPopUp();" >
               </div>
             </form>
+
             <div class="social-login">
-              <a href="#" class="btn btn-link btn-block"><span class="fa fa-facebook"></span> Login with Facebook</a>
-              <a href="#" class="btn btn-link btn-block"><span class="fa fa-twitter"></span> Login with Twitter</a>
+              <a href="#" onclick="openModalPopUp();" class="btn btn-link btn-block"><span class="fa fa-google"></span> Login with Google</a>
+              <a href="#" onclick="openModalPopUp();" class="btn btn-link btn-block"><span class="fa fa-facebook"></span> Login with Facebook</a>
+              <a href="http:\\www.cervashow.com"><img src="images/Cerva-Show.png" width="100px" height="100px" /></a>
             </div>
           </div>
         </div>
